@@ -12,11 +12,10 @@ namespace AdventureQuest
         {
             // Menu for quests or exiting program
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("You sit down at the tavern. You inspect the choices before you on a nearby wall.");
+            Console.WriteLine("You sit down at the tavern. You inspect the choices before you.");
             Console.WriteLine("1. Quest Managment");
             Console.WriteLine("2. Notifications");
-            Console.WriteLine("3. Quest Reports");
-            Console.WriteLine("4. Exit.");
+            Console.WriteLine("3. Exit.");
 
             // the readline to choose
             string MenuChoice = Console.ReadLine();
@@ -30,15 +29,11 @@ namespace AdventureQuest
                     break;
 
                 case "2":
-
+                    // this is where we will add notifications with twilio
+                    Console.WriteLine("You see a pigeon arriving with some mail.");
                     break;
 
                 case "3":
-
-
-                    break;
-
-                case "4":
                     Console.WriteLine("You exit the tavern and head back to town.");
                     Environment.Exit(0);
                     break;
