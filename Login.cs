@@ -61,6 +61,8 @@ namespace AdventureQuest
                 Console.ReadLine();
             }
 
+
+
         }
         public void LoginMessage()
         {

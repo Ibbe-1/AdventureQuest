@@ -55,7 +55,7 @@ namespace AdventureQuest
                 case "4":
                     Console.Clear();
                     Console.WriteLine("You leave the quest board and head back to the tavern.");
-                    MainMenu ReturnToMain = new MainMenu();
+                    MainMenu ReturnToMain = new MainMenu(this);
                     ReturnToMain.Menu();
                     break;
                 default:
@@ -175,7 +175,7 @@ namespace AdventureQuest
             {
                 Console.Clear();
                 Console.WriteLine("You leave the quest board and head back to the tavern.");
-                MainMenu ReturnToMain = new MainMenu();
+                MainMenu ReturnToMain = new MainMenu(this);
                 ReturnToMain.Menu();
             }
 
