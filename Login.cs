@@ -14,7 +14,7 @@ namespace AdventureQuest
 {
     public class Login
     {
-
+        public string UserRegister { get; private set; }  // the name of the user.
 
         public void TwoFactorSMS()
         {
