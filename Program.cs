@@ -6,6 +6,8 @@ namespace AdventureQuest
     {
         static void Main(string[] args)
         {
+
+
             // for our login
             Login loginMsg = new Login();
             loginMsg.LoginMessage();

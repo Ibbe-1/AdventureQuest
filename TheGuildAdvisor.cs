@@ -22,7 +22,8 @@ namespace AdventureQuest
         
         public async Task GuildAI()
         {
-         
+            ChatClient client = new(model: "gpt-4o", apiKey: "");
+
         }
     }
 }
