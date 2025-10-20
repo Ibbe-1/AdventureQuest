@@ -10,6 +10,12 @@ namespace AdventureQuest
 {
     internal class QuestManagment
     {
+        private Login login;
+
+        public QuestManagment(Login login)
+        {
+            this.login = login;
+        }
 
         // we make an enum for our quest status
         public enum Status
@@ -55,8 +61,8 @@ namespace AdventureQuest
                 case "4":
                     Console.Clear();
                     Console.WriteLine("You leave the quest board and head back to the tavern.");
-                    MainMenu ReturnToMain = new MainMenu(this);
-                    ReturnToMain.Menu();
+                    MainMenu menu = new MainMenu(this, login);
+                    menu.Menu();
                     break;
                 default:
                     Console.WriteLine("Invalid choice. Please select a valid option.");
@@ -117,7 +123,7 @@ namespace AdventureQuest
             },
             new QuestTemplate
             {
-                QuestName = "Find Lost Treasure",
+                QuestName = "Lost Treasure",
                 QuestDescription = "There's newly discovered ruins with hidden treasures. Get on it before the others.",
                 QuestDueDate = DateTime.Now.AddDays(7),
                 QuestPriority = "High",
@@ -175,8 +181,8 @@ namespace AdventureQuest
             {
                 Console.Clear();
                 Console.WriteLine("You leave the quest board and head back to the tavern.");
-                MainMenu ReturnToMain = new MainMenu(this);
-                ReturnToMain.Menu();
+                MainMenu menu = new MainMenu(this, login);
+                menu.Menu();
             }
 
             // we make a bool method to match the quest name with input
