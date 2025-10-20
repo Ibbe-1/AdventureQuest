@@ -40,7 +40,7 @@ namespace AdventureQuest
         {
             Console.Clear();
             // for our quest menu 
-            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("You approach the quest board in the tavern. What would you like to do?");
             Console.WriteLine("1. Add quests.");
             Console.WriteLine("2. Update quests");

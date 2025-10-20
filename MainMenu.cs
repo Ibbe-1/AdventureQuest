@@ -29,7 +29,7 @@ namespace AdventureQuest
             this.hero = new HeroInfo(questManager, login);
         }
 
-        public void Menu()
+        public async Task Menu()
         {
 
             // Menu for quests or exiting program
@@ -55,14 +55,14 @@ namespace AdventureQuest
                 case "2":
                     // this is where we will add notifications with twilio
                     Console.WriteLine("You see a pigeon arriving with some mail.");
-                    Notifications notifierSystem = new Notifications(questManager);
+                    Notifications notifierSystem = new Notifications(questManager, login);
                     notifierSystem.NotificationMenu();
                     break;
 
                 case "3":
                     Console.WriteLine("You approach the guild advisor.");
-                    TheGuildAdvisor guildAdvisor = new TheGuildAdvisor(questManager);
-                    guildAdvisor.GuildAI();
+                    TheGuildAdvisor guildAdvisor = new TheGuildAdvisor(questManager, login);
+                    await guildAdvisor.GuildAI();
                     break;
 
 

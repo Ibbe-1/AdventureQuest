@@ -14,10 +14,12 @@ namespace AdventureQuest
     {
         // need to declare the variables here so that it carries over our chosen quests from questmanagment.
         private QuestManagment questManager;
+        private Login login;
 
-        public Notifications(QuestManagment questManager)
+        public Notifications(QuestManagment questManager, Login login)
         {
             this.questManager = questManager;
+            this.login = login;
         }
         List<QuestManagment.QuestTemplate> quests;
 
@@ -46,7 +48,7 @@ namespace AdventureQuest
                     Console.WriteLine("Press a key to continue...");
                     Console.ReadLine();
                     Console.Clear();
-                    MainMenu mainMenu = new MainMenu(questManager);
+                    MainMenu mainMenu = new MainMenu(questManager, login);
                     mainMenu.Menu(); 
                     break;
 
