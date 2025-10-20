@@ -274,6 +274,7 @@ namespace AdventureQuest
 
                 default:
                     Console.WriteLine("Invalid choice.");
+                    QuestMenu();
                     break;
                     }
                 DisplayQuest(questToUpdate);
